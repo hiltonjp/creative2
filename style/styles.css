@@ -1,0 +1,83 @@
+/*--------------------------------------*/
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  padding: 0px;
+}
+
+.content {
+  height: 100%;
+}
+
+/*--------------------------------------*/
+
+.mobi {
+  display: none;
+}
+
+/*--------------------------------------*/
+
+
+nav {
+  border: 1px solid black;
+}
+
+.nav_wrapper {
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid black;
+}
+
+.page {
+  display: flex;
+  width: 95%;
+  height: 100%;
+  margin: auto;
+  border: 1px solid black;
+}
+
+.left {
+  /*--- shape ---*/
+  min-width: 200px;
+  max-width: 300px;
+  height: 100%;
+
+  /*--- space ---*/
+  margin-right: 10px;
+
+  /*--- color ---*/
+  border: 1px solid black;
+}
+
+.right {
+  flex-grow: 5;
+  height: 100%;
+  border: 1px solid black;
+}
+
+footer {
+  height: 50px;
+
+  position: -ms-align-self: baseline;
+  align-self: baseline;
+
+  border: 1px solid black;
+}

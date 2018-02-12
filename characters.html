@@ -2,7 +2,8 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Characters</title>
+    <link rel="icon" href="/image/SSB_Icon.png">
     <link rel="stylesheet" type="text/css" href="style/reset.css"/>
     <link rel="stylesheet" type="text/css" href="style/styles.css"/>
     <link rel="stylesheet" type="text/css" href="style/mobi.css"/>
@@ -37,28 +38,113 @@
       </nav>
 
       <!-- PAGE LAYOUT -->
-      <div class="page">
+      <div class="flex page">
         <div class="left">
-
+          <!-- lists all the characters for the user to select -->
+          <!-- will get loaded by jQuery upon page completion! -->
+          <ul class="char_select">
+            <li class="char_option" id="1">Character1</li>
+            <li class="char_option" id="2">Character2</li>
+            <li class="char_option" id="3">Character3</li>
+            <li class="char_option" id="4">Character4</li>
+            <li class="char_option" id="5">Character5</li>
+            <li class="char_option" id="6">Character6</li>
+            <li class="char_option" id="7">Character7</li>
+            <li class="char_option" id="8">Character8</li>
+            <li class="char_option" id="9">Character9</li>
+            <li class="char_option" id="10">Character10</li>
+            <li class="char_option" id="11">Character11</li>
+            <li class="char_option" id="12">Character12</li>
+            <li class="char_option" id="13">Character13</li>
+            <li class="char_option" id="14">Character14</li>
+            <li class="char_option" id="15">Character15</li>
+            <li class="char_option" id="16">Character16</li>
+            <li class="char_option" id="17">Character17</li>
+            <li class="char_option" id="18">Character18</li>
+            <li class="char_option" id="19">Character19</li>
+            <li class="char_option" id="20">Character20</li>
+            <li class="char_option" id="21">Character21</li>
+            <li class="char_option" id="22">Character22</li>
+            <li class="char_option" id="23">Character23</li>
+            <li class="char_option" id="24">Character24</li>
+            <li class="char_option" id="25">Character25</li>
+            <li class="char_option" id="26">Character26</li>
+            <li class="char_option" id="27">Character27</li>
+            <li class="char_option" id="28">Character28</li>
+            <li class="char_option" id="29">Character29</li>
+            <li class="char_option" id="30">Character30</li>
+            <li class="char_option" id="31">Character31</li>
+            <li class="char_option" id="32">Character32</li>
+            <li class="char_option" id="33">Character33</li>
+            <li class="char_option" id="34">Character34</li>
+            <li class="char_option" id="35">Character35</li>
+            <li class="char_option" id="36">Character36</li>
+            <li class="char_option" id="37">Character37</li>
+            <li class="char_option" id="38">Character38</li>
+            <li class="char_option" id="39">Character39</li>
+            <li class="char_option" id="40">Character40</li>
+            <li class="char_option" id="41">Character41</li>
+            <li class="char_option" id="42">Character42</li>
+            <li class="char_option" id="43">Character43</li>
+            <li class="char_option" id="44">Character44</li>
+            <li class="char_option" id="45">Character45</li>
+            <li class="char_option" id="46">Character46</li>
+            <li class="char_option" id="47">Character47</li>
+            <li class="char_option" id="48">Character48</li>
+            <li class="char_option" id="49">Character49</li>
+            <li class="char_option" id="50">Character50</li>
+            <li class="char_option" id="51">Character51</li>
+            <li class="char_option" id="52">Character52</li>
+            <li class="char_option" id="53">Character53</li>
+            <li class="char_option" id="54">Character54</li>
+            <li class="char_option" id="55">Character55</li>
+            <li class="char_option" id="56">Character56</li>
+            <li class="char_option" id="57">Character57</li>
+            <li class="char_option" id="58">Character58</li>
+          </ul>
         </div>
         <div class="right">
-
+          <!-- displays character info for the selected character -->
+          <!-- EXAMPLE HTML: THIS WILL GET POPULATED BY JQUERY -->
+          <div class="character_box">
+            <img src="http://kuroganehammer.com/Smash4/logo2/Bowser.png" class="char_pic"/>
+            <h1 id="character_name">CHARACTER_NAME</h1>
+            <div class="flex_center">
+              <div class="attacks_box">
+                <h2 id="attack_title">ATTACKS (BASE DAMAGE)</h2>
+                <p class="attack">Jab 1: 2.5%</p>
+                <p class="attack">Jab 2: 1.5%</p>
+                <p class="attack">Jab 3: 4%</p>
+                <p class="attack"></p>
+              </div>
+              <div class="attributes_box">
+                <h2 id="attribute_title">ATTRIBUTES</h2>
+                <p class="char_attribute">Running Speed: </p>
+                <p class="char_attribute">Walking Speed: </p>
+                <p class="char_attribute">Traction: </p>
+                <p class="char_attribute">Jump Strength: </p>
+                <p class="char_attribute">In-Air Maneuverability: </p>
+                <p class="char_attribute">Gravity: </p>
+                <p class="char_attribute">Shield Size: </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
       <!-- FOOTER ELEMENT -->
       <footer class="mobi">
         <ul>
-          <li><a href=""></a></li>
-          <li><a href=""></a></li>
-          <li><a href=""></a></li>
+          <li><a href="http://beta-api-kuroganehammer.azurewebsites.net/swagger/ui/index#!">API</a></li>
+          <li><a href="https://github.com/hiltonjp/creative2">Repository</a></li>
+          <li><a href="http://smashbros.com/us/">SSB4</a></li>
         </ul>
       </footer>
       <footer class="norm">
         <ul>
-          <li><a href=""></a></li>
-          <li><a href=""></a></li>
-          <li><a href=""></a></li>
+          <li><a href="http://beta-api-kuroganehammer.azurewebsites.net/swagger/ui/index#!">FrannHammer API</a></li>
+          <li><a href="https://github.com/hiltonjp/creative2">GitHub Repository</a></li>
+          <li><a href="http://smashbros.com/us/">SSB4 Official Site</a></li>
         </ul>
       </footer>
     </div>

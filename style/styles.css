@@ -1,4 +1,4 @@
-/*--------------------------------------*/
+/*----- ROOT ELEMENTS --------------------------------------------------------*/
 
 html {
   height: 100%;
@@ -7,20 +7,20 @@ html {
 body {
   height: 100%;
   padding: 0px;
+  margin: 0px;
 }
 
 .content {
   height: 100%;
 }
 
-/*--------------------------------------*/
+/*----- MOBILE TOGGLE --------------------------------------------------------*/
 
 .mobi {
   display: none;
 }
 
-/*--------------------------------------*/
-
+/*----- NAVIGATION -----------------------------------------------------------*/
 
 nav {
   border: 1px solid black;
@@ -38,16 +38,21 @@ nav ul {
 
 nav ul li {
   display: inline;
+  margin: 10px;
 }
 
 nav ul li a {
+  display: inline-block;
   padding: 10px;
-  margin: 10px;
   border: 1px solid black;
 }
 
-.page {
+/*----- PAGE -----------------------------------------------------------------*/
+.flex {
   display: flex;
+}
+
+.page {
   width: 95%;
   height: 100%;
   margin: auto;
@@ -73,11 +78,98 @@ nav ul li a {
   border: 1px solid black;
 }
 
-footer {
-  height: 50px;
 
-  position: -ms-align-self: baseline;
+/*----- SHARED ---------------------------------------------------------------*/
+.char_pic {
+  min-width: 200px; /* temporary*/
+  min-height: 200px;
+  display: block;
+
+  margin: 0 auto;
+  border: 1px solid black;
+}
+
+.flex_center {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/*----- MEET THE CHARACTERS --------------------------------------------------*/
+.character_box {
+  border: 1px solid black;
+}
+
+#character_name {
+  text-align: center;
+  margin-top: 10px;
+}
+
+#attack_title {
+  text-align: center;
+}
+
+#attribute_title {
+  text-align-last: center;
+}
+
+.attributes_box {
+  flex-grow: 1;
+  max-width: 390px;
+  margin: 10px;
+  border: 1px solid black;
+}
+
+.attacks_box {
+  flex-grow: 1;
+  max-width: 390px;
+  margin: 10px;
+  border: 1px solid black;
+}
+
+/*----- VERSUS CALCULATOR ----------------------------------------------------*/
+form {
+  border: 1px solid black;
+  text-align: center;
+}
+
+.vs_pic {
+  max-height: 400px;
+}
+
+.choice {
+  flex-grow: 1;
+  text-align: center;
+}
+
+
+/*----- FOOTER ---------------------------------------------------------------*/
+footer {
+  display: block;
+
+  -ms-align-self: baseline;
   align-self: baseline;
 
+  align-items: baseline;
+  border: 1px solid black;
+}
+
+footer ul {
+  display: inline-block;
+  list-style: none;
+
+  -ms-align-self: baseline;
+  align-self: baseline;
+}
+
+footer ul li {
+  display: inline-block;
+}
+
+footer ul li a {
+  display: inline-block;
+  padding: 10px;
+  margin: 10px;
   border: 1px solid black;
 }

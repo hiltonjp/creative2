@@ -2,7 +2,8 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Versus Calculator</title>
+    <link rel="icon" href="/image/SSB_Icon.png">
     <link rel="stylesheet" type="text/css" href="style/reset.css"/>
     <link rel="stylesheet" type="text/css" href="style/styles.css"/>
     <link rel="stylesheet" type="text/css" href="style/mobi.css"/>
@@ -38,27 +39,58 @@
 
       <!-- PAGE LAYOUT -->
       <div class="page">
-        <div class="left">
+        <!-- Select 2 characters, page decides who would win in a fight -->
+        <div class="flex_center" id="versus_img_container">
+          <img src="" id="left_character" class="char_pic vs_pic"/>
+          <img src="" id="right_character" class="char_pic vs_pic"/>
+        </div>
+
+        <form>
+          <div id="fighter_choices" class="flex_center">
+            <div class="choice" id="choice1">
+              <label>Figther #1:</label>
+              <select name="fighter1" id="fighter1">
+                <!-- populate with fighters via jQuery -->
+                <option value="exampleOption">exampleOption</option>
+              </select>
+            </div>
+
+            <div class="choice" id="choice2">
+              <label>Fighter #2:</label>
+              <select name="fighter2" id="fighter2">
+                <!-- populate with fighters via jQuery-->
+                <option value="exampleOption">exampleOption</option>
+              </select>
+            </div>
+          </div>
+
+          <input type="submit" id="fightButton" value="fight!">
+        </form>
+
+
+
+
+        <!--div class="left">
 
         </div>
         <div class="right">
 
-        </div>
+        </div-->
       </div>
 
       <!-- FOOTER ELEMENT -->
       <footer class="mobi">
         <ul>
           <li><a href="http://beta-api-kuroganehammer.azurewebsites.net/swagger/ui/index#!">API</a></li>
-          <li><a href="">Repository</a></li>
-          <li><a href=""></a></li>
+          <li><a href="https://github.com/hiltonjp/creative2">Repository</a></li>
+          <li><a href="http://smashbros.com/us/">SSB4</a></li>
         </ul>
       </footer>
       <footer class="norm">
         <ul>
           <li><a href="http://beta-api-kuroganehammer.azurewebsites.net/swagger/ui/index#!">FrannHammer API</a></li>
-          <li><a href="">GitHub Repository</a></li>
-          <li><a href=""></a></li>
+          <li><a href="https://github.com/hiltonjp/creative2">GitHub Repository</a></li>
+          <li><a href="http://smashbros.com/us/">SSB4 Official Site</a></li>
         </ul>
       </footer>
     </div>

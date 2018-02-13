@@ -41,8 +41,8 @@
       <div class="page">
         <!-- Select 2 characters, page decides who would win in a fight -->
         <div class="flex_center" id="versus_img_container">
-          <img src="" id="left_character" class="char_pic vs_pic"/>
-          <img src="" id="right_character" class="char_pic vs_pic"/>
+          <img src="/image/newChallenger.jpg" id="left_character" class="char_pic vs_pic"/>
+          <img src="/image/newChallenger.jpg" id="right_character" class="char_pic vs_pic"/>
         </div>
 
         <form>
@@ -63,11 +63,12 @@
               </select>
             </div>
           </div>
-
           <input type="submit" id="fightButton" value="fight!">
         </form>
 
-
+        <div id="battleResult">
+          <h1 id="battleWinner">Winner: Bowser</h1>
+        </div>
 
 
         <!--div class="left">
@@ -79,6 +80,7 @@
       </div>
 
       <!-- FOOTER ELEMENT -->
+      <div class = "push"></div>
       <footer class="mobi">
         <ul>
           <li><a href="http://beta-api-kuroganehammer.azurewebsites.net/swagger/ui/index#!">API</a></li>

@@ -1,6 +1,7 @@
 /*----- ROOT ELEMENTS --------------------------------------------------------*/
 
 html {
+  position: relative;
   height: 100%;
 }
 
@@ -54,8 +55,10 @@ nav ul li a {
 
 .page {
   width: 95%;
+  min-height: 100%;
+  height: auto !important;
   height: 100%;
-  margin: auto;
+  margin: 0 auto -300px;
   border: 1px solid black;
 }
 
@@ -63,7 +66,7 @@ nav ul li a {
   /*--- shape ---*/
   min-width: 200px;
   max-width: 300px;
-  height: 100%;
+  height: auto;
 
   /*--- space ---*/
   margin-right: 10px;
@@ -74,13 +77,13 @@ nav ul li a {
 
 .right {
   flex-grow: 5;
-  height: 100%;
+  height: auto;
   border: 1px solid black;
 }
 
 
 /*----- SHARED ---------------------------------------------------------------*/
-.char_pic {
+#char_pic {
   min-width: 200px; /* temporary*/
   min-height: 200px;
   display: block;
@@ -97,7 +100,9 @@ nav ul li a {
 }
 
 /*----- MEET THE CHARACTERS --------------------------------------------------*/
+
 .character_box {
+  height: 100%;
   border: 1px solid black;
 }
 
@@ -114,18 +119,52 @@ nav ul li a {
   text-align-last: center;
 }
 
-.attributes_box {
+#attributes_box {
   flex-grow: 1;
-  max-width: 390px;
+  max-width: 450px;
   margin: 10px;
   border: 1px solid black;
 }
 
-.attacks_box {
+#attacks_box {
   flex-grow: 1;
-  max-width: 390px;
+  max-width: 450px;
   margin: 10px;
   border: 1px solid black;
+}
+
+#attack_table {
+  width: 90%;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+#attribute_table {
+  width: 90%;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+/* Character Listing */
+.char_option {
+  text-align: center;
+}
+
+button {
+  border: none;
+  background-color: Transparent;
+  width: 100%;
+}
+
+button:focus {
+  outline: none;
+}
+
+.char_option:hover {
+  background-color: black;
+}
+.char_option button:hover {
+  color: white;
 }
 
 /*----- VERSUS CALCULATOR ----------------------------------------------------*/
@@ -143,11 +182,26 @@ form {
   text-align: center;
 }
 
+#battleResult {
+  text-align: center;
+}
 
 /*----- FOOTER ---------------------------------------------------------------*/
-footer {
-  display: block;
+.push {
+  height: 300px;
+}
 
+footer {
+  /*
+  display:none;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: auto;
+  width: 100%;
+  */
+
+  display: block;
   -ms-align-self: baseline;
   align-self: baseline;
 

@@ -19,6 +19,10 @@ img {
   border-radius: 6px;
 }
 
+button:focus {
+  outline: 0;
+}
+
 /*----- MOBILE TOGGLE --------------------------------------------------------*/
 
 .mobi {
@@ -59,6 +63,22 @@ nav ul li a {
   /* border: 1px solid black; */
 }
 
+nav ul li a:hover {
+  color: black;
+  border-radius: 4px;
+  background-color: white;
+}
+
+.logo:hover {
+  background-color: black;
+}
+
+.active {
+  color: black;
+  border-radius: 4px;
+  background-color: white;
+}
+
 /*----- PAGE -----------------------------------------------------------------*/
 .flex {
   display: flex;
@@ -77,6 +97,10 @@ nav ul li a {
   margin-left: 0;
 }
 
+.full {
+  width: 100%;
+}
+
 .left {
   /*--- shape ---*/
   min-width: 225px;
@@ -88,7 +112,7 @@ nav ul li a {
 
   /*--- color ---*/
 
-  background-color: #343d76;
+  background-color: rgb(113, 119, 159);
   box-shadow: 3px 0px 8px #00000088;
   /* border: 1px solid black; */
 }
@@ -132,7 +156,7 @@ nav ul li a {
 
 #character_name {
   text-align: center;
-  margin-top: 10px;
+  margin-bottom: 30px;
   font-size: 32pt;
   font-weight: bolder;
   font-family: 'Source Sans Pro', sans-serif;
@@ -280,6 +304,7 @@ select {
 .char_pick {
   flex-grow: 1;
   max-width: 650px;
+  width: 95%;
   margin:auto;
 }
 
@@ -288,7 +313,7 @@ select {
   padding: 5px;
   margin: 10px;
   border-radius: 4px;
-  box-shadow: 0px 5px 8px #343d76;
+  box-shadow: 0px 5px 8px #00000088;
 }
 
 #versus_img_container {
@@ -315,7 +340,7 @@ form {
   background-color: #666666;
   padding: 5px;
   margin: 0px 10px;
-  max-height: 350px;
+  max-width: 620px;
   border-radius: 4px;
   box-shadow: 0px 5px 8px #00000088;
 }

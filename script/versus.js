@@ -5,14 +5,16 @@ $(document).ready(function(){
     dataType: "json",
     success: function(json) {
       console.log(json);
+
+      // set up character list for selection
       var structure = "";
       json.forEach(function(character){
         structure += "<option value='" + character.MainImageUrl + "' theme='"+ character.ColorTheme +"'>" + character.DisplayName + "</option>";
       });
-
       $("#fighter1").append(structure);
       $("#fighter2").append(structure);
 
+      // on selection change
       $("#fighter1").change(function() {
         var theme = $("#fighter1 > option:selected").attr('theme');
         var adjusted = shadeColor(theme,0.3);
@@ -25,6 +27,7 @@ $(document).ready(function(){
         $("#fighter1").css("background-color",adjusted2);
       }).trigger("change");
 
+      // on selection change
       $("#fighter2").change(function() {
         var theme = $("#fighter2 > option:selected").attr('theme');
         var adjusted = shadeColor(theme,0.3);
@@ -39,18 +42,24 @@ $(document).ready(function(){
     }
   });
 
+  // Begin Fight!!!
   $("#fight_btn").on("click",function(e){
     e.preventDefault();
     var char1 = $("#fighter1 > option:selected").text();
     var char2 = $("#fighter2 > option:selected").text();
 
     if (char1 !== "Choose a Character" && char2 !== "Choose a Character") {
-      var winner = Math.random();
-      console.log(winner);
-      if (winner < 0.5) {
-        $("#battleWinner").text("WINNER: " + char1 + "!");
+      if (char1 === "King Dedede" || char2 === "King Dedede") { // Dedede is King, after all.
+        $("#battleWinner").text("WINNER:\n King Dedede!");
       } else {
-        $("#battleWinner").text("WINNER: " + char2 + "!");
+        // choose randomly
+        var winner = Math.random();
+        console.log(winner);
+        if (winner < 0.5) {
+          $("#battleWinner").text("WINNER:\n " + char1 + "!");
+        } else {
+          $("#battleWinner").text("WINNER:\n " + char2 + "!");
+        }
       }
     } else {
       $("#battleWinner").text("Please choose your characters!");

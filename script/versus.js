@@ -48,7 +48,7 @@ $(document).ready(function(){
     var char1 = $("#fighter1 > option:selected").text();
     var char2 = $("#fighter2 > option:selected").text();
 
-    if (char1 !== "Choose a Character" && char2 !== "Choose a Character") {
+    if (char1 !== "Choose" && char2 !== "Choose") {
       if (char1 === "King Dedede" || char2 === "King Dedede") { // Dedede is King, after all.
         $("#battleWinner").text("WINNER:\n King Dedede!");
       } else {

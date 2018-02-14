@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width">
     <title>Characters</title>
     <link rel="icon" href="/image/SSB_Icon.png">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
@@ -9,7 +10,6 @@
     <link rel="stylesheet" type="text/css" href="style/styles.css"/>
     <link rel="stylesheet" type="text/css" href="style/mobi.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="script/footer.js"></script>
     <script src="script/characters.js"></script>
   </head>
 
@@ -19,29 +19,26 @@
       <nav class="mobi">
         <div class="nav_wrapper">
           <ul>
-            <li><a href="/search.html">Search a Character</a></li>
-            <li><a href="/versus.html">Versus Calculator</a></li>
+            <li><a href="/versus.html">Versus</a></li>
             <li><a href="/index.html"><img src="/image/SSB4logo.png" class="homelogo"/></a></li>
-            <li><a href="/characters.html">Meet the Characters</a></li>
-            <li><a href="/about.html">About Us</a></li>
+            <li><a href="/characters.html">Characters</a></li>
           </ul>
         </div>
       </nav>
       <nav class="norm">
         <div class="nav_wrapper">
           <ul>
-            <li><a href="/search.html">Search a Character</a></li>
             <li><a href="/versus.html">Versus Calculator</a></li>
             <li><a href="/index.html"><img src="/image/SSB4logo.png" class="homelogo"/></a></li>
             <li><a href="/characters.html">Meet the Characters</a></li>
-            <li><a href="/about.html">About Us</a></li>
           </ul>
         </div>
       </nav>
 
       <!-- PAGE LAYOUT -->
-      <div class="flex page">
+      <div class="flex page uncentered">
         <div class="left">
+          <h1 id="charselect_header">CHARACTERS</h1>
           <!-- lists all the characters for the user to select -->
           <!-- will get loaded by jQuery upon page completion! -->
         </div>
@@ -49,7 +46,22 @@
           <!-- displays character info for the selected character -->
           <!-- EXAMPLE HTML: THIS WILL GET POPULATED BY JQUERY -->
           <div class="character_box">
-            <img src="/image/newChallenger.jpg" id="char_pic"/>
+            <img src="/image/newChallenger.png" id="char_pic"/>
+
+            <div class="flex_center">
+              <form>
+                <div class="choice mobi" id="choice1">
+                  <label>Character:</label>
+                  <select name="fighter" id="fighter">
+                    <option id="tempChoice" value="/image/newChallenger.png" OwnerId="0" theme="#343d76">Choose</option>
+                    <!-- populate with fighters via jQuery -->
+                  </select>
+                </div>
+              </form>
+            </div>
+
+
+
             <h1 id="character_name"></h1>
             <div id="char_infobox" class="flex_center">
               <div id="attacks_box"></div>

@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width">
     <title>Versus Calculator</title>
     <link rel="icon" href="/image/SSB_Icon.png">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
@@ -9,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="style/styles.css"/>
     <link rel="stylesheet" type="text/css" href="style/mobi.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="/api.js"></script>
+    <script src="/script/versus.js"></script>
   </head>
 
   <body>
@@ -18,22 +19,18 @@
       <nav class="mobi">
         <div class="nav_wrapper">
           <ul>
-            <li><a href="/search.html">Search a Character</a></li>
-            <li><a href="/versus.html">Versus Calculator</a></li>
+            <li><a href="/versus.html">Versus</a></li>
             <li><a href="/index.html"><img src="/image/SSB4logo.png" class="homelogo"/></a></li>
-            <li><a href="/characters.html">Meet the Characters</a></li>
-            <li><a href="/about.html">About Us</a></li>
+            <li><a href="/characters.html">Characters</a></li>
           </ul>
         </div>
       </nav>
       <nav class="norm">
         <div class="nav_wrapper">
           <ul>
-            <li><a href="/search.html">Search a Character</a></li>
             <li><a href="/versus.html">Versus Calculator</a></li>
             <li><a href="/index.html"><img src="/image/SSB4logo.png" class="homelogo"/></a></li>
             <li><a href="/characters.html">Meet the Characters</a></li>
-            <li><a href="/about.html">About Us</a></li>
           </ul>
         </div>
       </nav>
@@ -41,34 +38,41 @@
       <!-- PAGE LAYOUT -->
       <div class="page">
         <!-- Select 2 characters, page decides who would win in a fight -->
-        <div class="flex_center" id="versus_img_container">
-          <img src="/image/newChallenger.jpg" id="left_character" class="char_pic vs_pic"/>
-          <img src="/image/newChallenger.jpg" id="right_character" class="char_pic vs_pic"/>
+        <div class="flex_center flex_down" id="versus_img_container">
+          <div class="char_pick">
+            <img src="" id="left_character" name="left_character" class="char_pic vs_pic"/>
+            <form>
+              <div class="choice" id="choice1">
+                <label>Figther #1:</label>
+                <select name="fighter1" id="fighter1">
+                  <option value="/image/newChallenger.png" theme="#343d76">Choose a Character</option>
+                  <!-- populate with fighters via jQuery -->
+                </select>
+              </div>
+            </form>
+          </div>
+          <h1 id="vs">VS.</h1>
+          <div class="char_pick">
+            <img src="" id="right_character" name="right_character" class="char_pic vs_pic"/>
+            <form>
+              <div class="choice" id="choice2">
+                <label>Figther #2:</label>
+                <select name="fighter2" id="fighter2">
+                  <option value="/image/newChallenger.png" theme="#343d76">Choose a Character</option>
+                  <!-- populate with fighters via jQuery -->
+                </select>
+              </div>
+            </form>
+          </div>
         </div>
 
-        <form>
-          <div id="fighter_choices" class="flex_center">
-            <div class="choice" id="choice1">
-              <label>Figther #1:</label>
-              <select name="fighter1" id="fighter1">
-                <!-- populate with fighters via jQuery -->
-                <option value="exampleOption">exampleOption</option>
-              </select>
-            </div>
+        <div class="flex_center">
+          <button id="fight_btn"><div id="pad">Fight!</div></button>
+        </div>
 
-            <div class="choice" id="choice2">
-              <label>Fighter #2:</label>
-              <select name="fighter2" id="fighter2">
-                <!-- populate with fighters via jQuery-->
-                <option value="exampleOption">exampleOption</option>
-              </select>
-            </div>
-          </div>
-          <input type="submit" id="fightButton" value="fight!">
-        </form>
 
         <div id="battleResult">
-          <h1 id="battleWinner">Winner: Bowser</h1>
+          <h1 id="battleWinner"></h1>
         </div>
 
 

@@ -29,7 +29,9 @@ nav ul li {
 }
 
 nav ul li a {
+  font-size: 16pt;
   margin: 0;
+  padding: 5px;
 }
 
 

@@ -36,6 +36,17 @@ nav {
   /* border: 1px solid black; */
 }
 
+.mySlides {
+  display:none;
+  margin: 0 auto;
+}
+
+#slideShow {
+  padding: 10px;
+  box-shadow: 0px 5px 8px #00000088;
+  background-color: rgb(113, 119, 159);
+}
+
 .nav_wrapper {
   text-align: center;
 }
@@ -54,12 +65,12 @@ nav ul li {
 nav ul li a {
   text-decoration: none;
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: 16pt;
+  font-size: 20pt;
   font-weight: bolder;
   color: white;
 
   display: inline-block;
-  padding: 5px;
+  padding: 10px;
   /* border: 1px solid black; */
 }
 

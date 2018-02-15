@@ -104,6 +104,10 @@ nav ul li a:hover {
   /* border: 1px solid black; */
 }
 
+.filled {
+  width: 100%;
+}
+
 .uncentered {
   margin-left: 0;
 }
@@ -158,8 +162,28 @@ nav ul li a:hover {
   flex-direction: column;
 }
 
-/*----- MEET THE CHARACTERS --------------------------------------------------*/
+/*----- HOME PAGE ------------------------------------------------------------*/
+.mySlides {
+  display:none;
+  margin: 0 auto;
+}
 
+#slideShow {
+  padding: 10px;
+  box-shadow: 0px 5px 8px #00000088;
+  background-color: rgb(113, 119, 159);
+}
+
+.blurb {
+  margin: 10px auto;
+  padding: 12px 16px;
+  box-shadow: 0px 5px 8px #00000088; 
+  background-color: rgb(113, 119, 159);
+  border-radius: 3px; 
+  text-align: justify;
+}
+
+/*----- MEET THE CHARACTERS --------------------------------------------------*/
 .character_box {
   height: 100%;
   /* border: 1px solid black; */

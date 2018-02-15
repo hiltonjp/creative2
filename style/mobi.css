@@ -34,6 +34,15 @@ nav ul li a {
   padding: 5px;
 }
 
+/*----- HOME PAGE ------------------------------------------------------------*/
+  #slideShow {
+    border-radius: 3px;
+    margin-top: 12px;
+  }
+
+  .blurb {
+    display: block;
+  }
 
 /*----- CHARACTERS PAGE ------------------------------------------------------*/
   #character_name {

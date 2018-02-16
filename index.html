@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>Smash Brothers Stats</title>
+    <title>Super Smash Stats</title>
     <link rel="icon" href="/image/SSB_Icon.png">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style/reset.css"/>
@@ -36,31 +36,36 @@
       </nav>
 
       <!-- PAGE LAYOUT -->
-      <div class="flex page uncentered">
+      <div class="flex page filled">
         <div class="left">
-
+          <ul id="blurbOptions">
+            <li class="char_option" id="welcome"><button class="char_button bigger">Welcome</button></li>
+            <li class="char_option" id="under"><button class="char_button bigger">Under the Hood</button></li>
+            <li class="char_option" id="about"><button class="char_button bigger">About Us</button></li>
+          </ul>
         </div>
-        <div class="right">
+        <div class="right" id="home">
+          <h1 id="homeWelcome">Welcome to Super Smash Stats!</h1>
           <div id="slideShow">
-            <img class="mySlides" src="/image/DDD.jpg" style="width:80%">
-            <img class="mySlides" src="/image/DKMegaman.jpg" style="width:80%">
-            <img class="mySlides" src="/image/luigikick.jpg" style="width:80%">
-            <img class="mySlides" src="/image/wiiFit.jpg" style="width:80%">
-            <img class="mySlides" src="/image/marioKick.jpg" style="width:80%">
-            <img class="mySlides" src="/image/yoshi.jpg" style="width:80%">
+            <img class="mySlides" src="/image/DDD.jpg" style="width:60%">
+            <img class="mySlides" src="/image/DKMegaman.jpg" style="width:60%">
+            <img class="mySlides" src="/image/luigikick.jpg" style="width:60%">
+            <img class="mySlides" src="/image/wiiFit.jpg" style="width:60%">
+            <img class="mySlides" src="/image/marioKick.jpg" style="width:60%">
+            <img class="mySlides" src="/image/yoshi.jpg" style="width:60%">
           </div>
-          <div class="blurb">
+          <div class="blurb" id="welcome">
             <h1>Welcome</h1>
-            <p>This is Super Smash Bros. StatX! Using the FrannHammer API, we bring you the character data for Super Smash Brothers WiiU/3DS. The character data is all real, and based off of data presented by KuroganeHammer, a moderator on Smashboards. All the data you see on this site originates from <a href-"kuroganehammer.com">here</a> along with character data being gathered from several other games! the FrannHammer API is currently under development, and so still receives updates from time to time. luckily, the updates for Smash 4 seem to be finished!
+            <p>&emsp;This is Super Smash Stats! Using the FrannHammer API, we bring you the character data for Super Smash Brothers WiiU/3DS. The character data is all real, and based off of data presented by KuroganeHammer, a moderator on Smashboards. All the data you see on this site originates from <a href="http://kuroganehammer.com">here</a> along with character data being gathered from several other games! the FrannHammer API is currently under development, and so still receives updates from time to time. luckily, the updates for Smash 4 seem to be finished!
           </div>
-          <div class="blurb">
+          <div class="blurb" id="under">
             <h1>Under the Hood</h1>
-            <p>The Characters page works by immediately calling on the API to populate the list of available characters (on the left in the full site, and in the dropdown on mobile), then when you select a character, the site runs a cross-reference on the json provided by the original call to find the URLs for the moves list and attributes list for the selected character. The page then makes two API calls for those lists and populates the tables you see on the page. The images for the characters are also provided by the API.
-The Versus page works in a similar fashion. the immediate API call populates the list of characters in both dropdowns, and when a character is selected, the image for them changes based on the json results of the initial call. When you click FIGHT!, the page randomly chooses who would win in a theoretical fight between these two characters.</p>
+            <p>&emsp;The Characters page works by immediately calling on the API to populate the list of available characters (on the left in the full site, and in the dropdown on mobile), then when you select a character, the site runs a cross-reference on the json provided by the original call to find the URLs for the moves list and attributes list for the selected character. The page then makes two API calls for those lists and populates the tables you see on the page. The images for the characters are also provided by the API.
+&emsp;The Versus page works in a similar fashion. the immediate API call populates the list of characters in both dropdowns, and when a character is selected, the image for them changes based on the json results of the initial call. When you click FIGHT!, the page randomly chooses who would win in a theoretical fight between these two characters.</p>
           </div>
-          <div class="blurb">
+          <div class="blurb" id="about">
             <h1>About us</h1>
-            <p>Both Evan and Jeff grew up playing Super Smash Brothers as kids, and still continue to love the game today. Jeff's favorite entry in the series is Super Smash Brothers Melee, and Evan's is</p>
+            <p>&emsp;Both Evan and Jeff grew up playing Super Smash Brothers as kids, and still continue to love the game today. Jeff's favorite entry in the series is Super Smash Brothers Melee, and Evan's is Project M (A brawl fan mod). Winning is the name of the game, and we hope this website gives you a competitive edge!</p>
             <p></p>
           </div>
         </div>

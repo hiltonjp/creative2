@@ -13,4 +13,16 @@ $(document).ready(function(){
       x[slideIndex-1].style.display = "block";
       setTimeout(carousel, 3000); // Change image every 2 seconds
   }
+
+  $("li").on("click",function() {
+    var id = this.id;
+    var x = document.getElementsByClassName("blurb");
+    for (i = 0; i < x.length; i++) {
+      if(x[i].id === id){
+        x[i].style.display = "block";
+      } else {
+        x[i].style.display = "none";
+      }
+    }
+  });
 });

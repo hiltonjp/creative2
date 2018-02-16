@@ -19,9 +19,35 @@
     display: none;
   }
 
+  .right {
+    width: 100%;
+    padding: 0;
+  }
+
 /*----- NAV ------------------------------------------------------------------*/
 .homelogo {
   width: 150px;
+}
+
+#home {
+  padding: 60px 10px;
+}
+
+#homeWelcome {
+  font-size: 34pt;
+}
+
+.mySlides {
+  display: none;
+  width: 100% !important;
+}
+
+.blurb {
+  font-size: 18pt;
+}
+
+.blurb h1 {
+  font-size: 34pt;
 }
 
 nav ul li {

@@ -38,13 +38,52 @@ nav {
 
 .mySlides {
   display:none;
-  margin: 0 auto;
+  margin: 100px auto;
+
+}
+
+#homeWelcome {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 40pt;
+  font-weight: bolder;
+  margin-bottom: 40px;
+  text-align: center;
 }
 
 #slideShow {
+  border-radius: 3px;
   padding: 10px;
   box-shadow: 0px 5px 8px #00000088;
   background-color: rgb(113, 119, 159);
+}
+
+#blurbOptions {
+  margin-top: 20px;
+}
+
+#home {
+   padding: 60px 100px;
+}
+
+.blurb {
+  font-family: 'Source Sans Pro', sans-serif;
+  display: none;
+  font-size: 24pt;
+  margin-top: 40px !important;
+  padding: 30px !important;
+}
+
+.bigger {
+  font-size: 19pt !important;
+}
+
+.blurb h1 {
+  font-size: 40pt;
+  margin-bottom: 10px;
+}
+
+.blurb#welcome {
+  display: block;
 }
 
 .nav_wrapper {
@@ -177,10 +216,10 @@ nav ul li a:hover {
 .blurb {
   margin: 10px auto;
   padding: 12px 16px;
-  box-shadow: 0px 5px 8px #00000088; 
+  box-shadow: 0px 5px 8px #00000088;
   background-color: rgb(113, 119, 159);
-  border-radius: 3px; 
-  text-align: justify;
+  border-radius: 3px;
+  text-align: left;
 }
 
 /*----- MEET THE CHARACTERS --------------------------------------------------*/

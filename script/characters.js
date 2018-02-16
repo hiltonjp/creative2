@@ -13,10 +13,10 @@ $(document).ready(function(){
       var structure = "<ul class='char_select'>";
       var selection = "";
       json.forEach(function(character){
-        structure += "<li class='char_option' id='" + character.OwnerId + "'><button class='char_button'>" + character.DisplayName + "</button></li>";
+        structure += "<li class='char_option' value='" + character.MainImageUrl + "' id='" + character.OwnerId + "' movesURL='" + character.Links[1].Href + "' attrURL='" + character.Links[2].Href + "'><button class='char_button'>" + character.DisplayName + "</button></li>";
 
         // Mobile Character Selection
-        selection += "<option value='" + character.MainImageUrl + "' OwnerId='"+ character.OwnerId +"' theme='" + character.ColorTheme + "'>" + character.DisplayName + "</option>";
+        selection += "<option value='" + character.MainImageUrl + "' OwnerId='"+ character.OwnerId + "' movesURL='" + character.Links[1].Href + "' attrURL='" + character.Links[2].Href + "' theme='" + character.ColorTheme + "'>" + character.DisplayName + "</option>";
       });
       structure += "</ul>";
 
@@ -29,17 +29,18 @@ $(document).ready(function(){
         $("#tempChoice").remove();
 
         //needed for ajax methods
-        var id = $("#fighter > option:selected").attr('OwnerId') - 1;
+        var id = $("#fighter > option:selected").attr('OwnerId') - 1 ;
+        var name = $("#fighter > option:selected").text();
 
         // recolor page based on provided color theme
         recolorUI($("#fighter > option:selected").attr('theme'));
 
         //change picture and character name
         $("#char_pic").attr("src",$(this).val());
-        $("#character_name").text(json[id].DisplayName);
+        $("#character_name").text(name);
 
-        var movesURL = json[id].Links[1].Href;
-        var attrURL = json[id].Links[2].Href;
+        var movesURL = $("#fighter > option:selected").attr('movesURL');
+        var attrURL = $("#fighter > option:selected").attr('attrURL');
 
         gatherPageData(movesURL,attrURL);
       });
@@ -63,16 +64,18 @@ $(document).ready(function(){
 
         //needed for ajax methods
         var id = this.id-1;
+        var name = $(this).text();
+
 
         // change image and character name
-        $("#char_pic").attr("src",json[id].MainImageUrl);
-        $("#character_name").text(json[id].DisplayName);
+        $("#char_pic").attr("src",$(this).attr("value"));
+        $("#character_name").text(name);
 
         // recolor page based on provided color theme
         recolorUI(json[id].ColorTheme);
 
-        var movesURL = json[id].Links[1].Href;
-        var attrURL = json[id].Links[2].Href;
+        var movesURL = $(this).attr("movesURL");
+        var attrURL = $(this).attr("attrURL");
 
         gatherPageData(movesURL,attrURL);
       }); //on "click"
